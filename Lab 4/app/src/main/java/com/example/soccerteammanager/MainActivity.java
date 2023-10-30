@@ -44,11 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_CANCELED) return;
-
-        // Getting the Avatar Image we show to our users
         ImageView avatarImage = findViewById(R.id.avatarImage);
-
-        // Figuring out the correct image
         int imageID = data.getIntExtra("imageID", R.id.logo0);
         String drawableName;
 
